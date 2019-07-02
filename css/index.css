@@ -1,7 +1,11 @@
-header{
+/* header{
     span: 1024px;
     background: salmon;
     border: black ,dotted;
     display: inline-block;
     height: 50 px;
+} */
+
+table{
+    border-color: black;
 }
