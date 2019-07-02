@@ -1,21 +1,37 @@
 'use strict';
 
-function hours(){
-  var hours = [ '6am', '7am', '8am', '9am', '10am', '11am', 'Noon', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+let places = [
+  {name: 'pike', minCustomer: }
+]
 
-  var locations = ['1st & Pike', 'SeaTac', 'Seattle Center', 'Capiton Hill', 'Alki'];
-
-  function makeRows(){
-    hours.forEach(function(hours){
-      var row = ('<tr></tr>');
-      row.append(('<td></td>').text(hours.hours));
-      row.push({
-        hours: hours,
-        element: row
-      });
-    });
+let mountains = [
+  { name: "Monte Falco", height: 1658, place: "Parco Foreste Casentinesi" },
+  { name: "Monte Falterona", height: 1654, place: "Parco Foreste Casentinesi" },
+  { name: "Poggio Scali", height: 1520, place: "Parco Foreste Casentinesi" },
+  { name: "Pratomagno", height: 1592, place: "Parco Foreste Casentinesi" },
+  { name: "Monte Amiata", height: 1738, place: "Siena" }
+];
+function generateTableHead(table, data) {
+  let thead = table.createTHead();
+  let row = thead.insertRow();
+  for (let key of data) {
+    let th = document.createElement("th");
+    let text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
   }
-  makeRows();
 }
-
-hours();
+function generateTable(table, data) {
+  for (let element of data) {
+    let row = table.insertRow();
+    for (key in element) {
+      let cell = row.insertCell();
+      let text = document.createTextNode(element[key]);
+      cell.appendChild(text);
+    }
+  }
+}
+let table = document.querySelector("table");
+let data = Object.keys(mountains[0]);
+generateTableHead(table, data);
+generateTable(table, mountains);

@@ -1,49 +1,43 @@
 'use strict';
 
 
-var storeInfo = {
-  Pike: { 
-    minCustomer: 23, 
-    maxCustomer: 65, 
-    avgSales: 6.5},
-  Seatac: {
-    minCustomer: 3, 
-    maxCustomer: 24, 
-    avgSales: 1.2},
-  SeaCentr: {
-    minCustomer: 11, 
-    maxCustomer: 38, 
-    avgSales: 6.5},
-  Caphill: {
-    minCustomer: 20, 
-    maxCustomer: 38, 
-    avgSales: 2.3},
-  Alki: {
-    minCustomer: 2,
-    maxCustomer: 16, 
-    avgSales: 4.6}
+function Place(name, minCustomer, maxCustomer){
+  this.name = name;
+  this.minCustomer = minCustomer;
+  this.maxCustomer = maxCustomer;
+  Place.list.push(this);
+}
+
+Place.list =[];
+
+Place.prototype.render = function(){
+  var tableBody = document.getElementById('stores');
+  var tableRow = document.getElementById('tr');
+  var cell = document.getElementById('td');
+  cell.textContent = this.name;
+  tableRow.appendChild(cell);
+  cell = document.createElement('td');cell.textContent = this.minCustomer;
+  tableRow.appendChild(cell);
+  cell = document.createElement('td');
+  cell.textContent = this.maxCustomer;
+  tableRow.appendChild(cell);
+  tableBody.appendChild(tableRow);
 };
 
-// function Place(name, minCustomer, maxCustomer){
-//   this.name = name;
-//   this.minCustomer = minCustomer;
-//   this.maxCustomer = maxCustomer;
-//   this.hours = [ '6am', '7am', '8am', '9am', '10am', '11am', 'Noon', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-
-
-  
-  
+new Place('Pike', 23, 65, 6.5);
+new Place('Pike', 23, 65, 6.5);
+new Place('Pike', 23, 65, 6.5);
 //   function table(){
 //   };
  
-function(storeInfo){
-    var rows = ('<tr></tr>');
-    rows.append(('<td></td>').text(storeInfo.name));
-    rows.push({
-      storeInfo:storeInfo,
+// function(storeInfo){
+//     var rows = ('<tr></tr>');
+//     rows.append(('<td></td>').text(storeInfo.name));
+//     rows.push({
+//       storeInfo:storeInfo,
 
-    });
-  };
+//     });
+//   };
 
 // table();
 // makeRows();
@@ -52,4 +46,4 @@ function(storeInfo){
 // console.log(Place())
 // }
 
-storeInfo();
+// storeInfo();
