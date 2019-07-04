@@ -20,7 +20,7 @@ function table(){
 
 function makeRows(){
   var rows = ('<tr></tr>');
-  rows.append(('<td></td>').text Storeinfo.name));
+  rows.append(('<td></td>').text.Storeinfo(name));
   rows.push({
     storeInfo:Storeinfo,
 

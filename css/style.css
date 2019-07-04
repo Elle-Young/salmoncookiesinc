@@ -1,0 +1,126 @@
+
+html{
+    background-color: rgb(226, 160, 169);
+    padding: 20px;
+}
+
+hr{
+    color: rgb(93, 100, 84);
+}
+
+body {
+    border: 1px solid rgb(139, 86, 106);
+    border-radius: 5px;
+    color: rgba(150, 79, 94, 0.87);
+    margin: 0px auto;
+    padding: 20px 0px;
+    width: 1064px;
+    background-color: rgb(53, 13, 13)
+}
+
+body > header {
+    background-color: rgb(93, 100, 84);
+    border-radius: 5px;
+    color: white;
+    height: 70px;
+    margin: 0px auto 19px auto;
+    width: 1024px;
+}
+
+body > header > h1 {
+    font-size: 40px;
+    font-style: italic;
+    float: left;
+    height: 40px;
+    margin: 5px;
+    padding: 10px;
+    width: auto;
+}
+
+body > header > nav {
+    height: 70px;
+    float: right;
+    font-size: 0px;
+    width: 300px;
+}
+
+nav > ul > li {
+    display: inline-block;
+    font-size: 30px;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+nav > ul > li:first-child {
+    margin-right: 30px;
+}
+
+li > a {
+    color: white;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+
+
+main{
+    width: 1024px;
+    margin: 10px auto;
+
+}
+main > section {
+    width: 1024px;
+    margin: auto;
+}
+
+main > section:first-child > div > header {
+    background-color: rgba(226, 47, 116, 0.678);
+    border-radius: 5px;
+    color: antiquewhite;
+    height: 25px;
+    font-size: 25px;
+    padding: 7.5px;
+    margin-bottom: 10px;
+    width: 1009px;
+}
+
+
+
+
+
+table {
+    margin: auto;
+    width: 600px;
+}
+
+thead > tr {
+    background-color: rgb(93, 100, 84);
+    color: white;
+    font-family: 'Barriecito', cursive;
+    font-size: 35;
+}
+
+tr {
+    height: 30px;
+}
+
+td {
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+th {
+    padding: 10px;
+}
+
+footer {
+    border-radius: 5px;
+    background-color: grey;
+    color: antiquewhite;
+    margin: 20px auto 0px auto;
+    width: 1024px;
+}
+
+footer > p {
+    padding: 10px;
+}
