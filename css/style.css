@@ -11,7 +11,7 @@ hr{
 body {
     border: 1px solid rgb(139, 86, 106);
     border-radius: 5px;
-    color: rgba(150, 79, 94, 0.87);
+    color: rgba(111, 150, 79, 0.87);
     margin: 0px auto;
     padding: 20px 0px;
     width: 1064px;
@@ -74,7 +74,7 @@ main > section {
 }
 
 main > section:first-child > div > header {
-    background-color: rgba(226, 47, 116, 0.678);
+    background-color: rgba(41, 136, 41, 0.678);
     border-radius: 5px;
     color: antiquewhite;
     height: 25px;
@@ -94,7 +94,7 @@ table {
 }
 
 thead > tr {
-    background-color: rgb(93, 100, 84);
+    background-color: rgb(60, 105, 39);
     color: white;
     font-family: 'Barriecito', cursive;
     font-size: 35;
